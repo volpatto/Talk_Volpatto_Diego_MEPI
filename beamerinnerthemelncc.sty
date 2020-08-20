@@ -1,0 +1,32 @@
+\mode<presentation>
+
+% Title page
+\defbeamertemplate*{title page}{lncc}[1][]
+{ 
+ 	\vskip0.5cm
+ 	\centering
+ 	\begin{tikzpicture}
+    \node [fill=lncc-color, opacity=1.0,rounded corners=5pt,
+    		minimum size=2cm, blur shadow={shadow blur steps=5},
+    		text=white, text width=10cm,align=center] 
+    {\centering\large\textbf{\inserttitle} \\[0.5em] {\large\insertsubtitle}};
+	\end{tikzpicture}
+    \vskip1.0cm%
+      {\usebeamerfont{author}\textcolor{lncc-color}{\insertauthor}}%
+     \vskip0.2cm%
+      {\usebeamerfont{institute}\textcolor{lncc-color}{\insertinstitute}}%
+      \vfill
+      {\usebeamerfont{date}\textcolor{lncc-color}{\insertdate}}%
+	  \vfill
+      \includegraphics[scale=0.2]{./logos/lncc40.png}
+      ~
+      \includegraphics[scale=0.3]{./logos/UFRRJ.png}
+  \vfill
+}
+
+% Items
+\setbeamertemplate{items}[square]
+\setbeamertemplate{sections/subsections in toc}[square]
+
+\mode
+<all>

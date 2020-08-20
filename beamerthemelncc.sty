@@ -1,0 +1,37 @@
+\mode<presentation>
+
+% Requirement
+\RequirePackage{tikz}
+\RequirePackage{color}
+\RequirePackage{etoolbox}
+\usetikzlibrary{shadows.blur}
+
+% My institute color
+\definecolor{lncc-color}{RGB}{7,90,192}
+
+% Settings
+\useinnertheme{lncc}
+\useoutertheme{lncc}
+\usecolortheme{lncc}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+\defbeamertemplate*{footline}{lncc-footline}
+{
+    \ifnum \insertpagenumber=1
+      \leavevmode%
+      \vskip0pt%
+    \else
+      \leavevmode%
+      \vskip-6pt
+      \hbox to1cm{\hskip0.3cm
+	  \scriptsize
+      \strut\usebeamercolor[fg]{subsection in
+	      sidebar}\insertframenumber\hfill}%
+	  \vskip3pt
+      \vskip0pt%
+    \fi
+}
+\setbeamertemplate{footline}[lncc-footline]
+
+\mode<all>
